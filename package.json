@@ -1,0 +1,15 @@
+{
+  "name": "nutec-ui",
+  "private": true,
+  "scripts": {
+    "learna": "lerna-wizard",
+    "lerna": "lerna",
+    "start": "lerna run --parallel start",
+    "start:portal": "cd packages/portal && yarn start",
+    "start:weblab": "cd packages/weblab && yarn start",
+    "start:admin": "cd packages/admin && yarn start"
+  },
+  "devDependencies": {
+    "lerna": "^3.13.0"
+  }
+}
