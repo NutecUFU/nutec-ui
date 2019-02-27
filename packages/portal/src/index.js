@@ -9,7 +9,7 @@ import store from './store';
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter basename="/portal">
+    <BrowserRouter">
       <Switch>
         <App />
       </Switch>
