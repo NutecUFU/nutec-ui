@@ -2,7 +2,7 @@
   "name": "admin",
   "version": "0.1.0",
   "private": true,
-  "homepage": "admin",
+  "homepage": ".",
   "dependencies": {
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
