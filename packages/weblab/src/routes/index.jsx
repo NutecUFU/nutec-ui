@@ -7,7 +7,7 @@ import store from 'store'
 
 const Routes = () => (
   <Provider store={store}>
-    <BrowserRouter>
+    <BrowserRouter basename="/weblab">
       <Switch>
         <Route exact path="/" component={Application} />
         <Route path="/experiments" component={Experiments} />
