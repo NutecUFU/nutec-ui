@@ -8,7 +8,8 @@ const Classroom = () => {
     'Maycon pacheco',
     'Lucas',
     'Gabriel',
-    'Matheus'
+    'Matheus',
+    'Joao',
   ]
 
   return (
