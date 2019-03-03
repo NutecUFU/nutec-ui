@@ -4,6 +4,8 @@ import styled from 'styled-components'
 import Initial from './Initial'
 
 const HomeWrapper = styled.div`
+  height: 100%;
+  margin: 6rem auto;
 `
 
 class Home extends Component {

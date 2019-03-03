@@ -8,7 +8,6 @@ import { theme } from '../../core/styled/theme'
 import GlobalStyle from '../../core/styled/global-style'
 import { AppWrapper, AppBodyWrapper, AppBody, SidebarOverlay, AppHeaderWrapper } from './styled'
 import Navbar from './Navbar'
-import Sidebar from './Sidebar'
 import Team from '../Team'
 import Contact from '../Contact'
 import Exp from '../Exp'
@@ -24,24 +23,17 @@ class App extends Component {
       <ThemeProvider theme={theme}>
         <AppWrapper>
           <GlobalStyle/>
-          <AppHeaderWrapper>
-            <Navbar toggleSidebar={() => this.props.toggleSidebar()}/>
-          </AppHeaderWrapper>
-          <AppBodyWrapper>
-            <Sidebar open={this.props.sidebar} toggleSidebar={() => this.props.toggleSidebar()}/>
-            <SidebarOverlay onClick={()=> this.props.toggleSidebar()} open={this.props.sidebar}/>
-            <AppBody>
-              <Route path="/" exact component={Home}/>
-              <Route path="/team" exact component={Team}/>
-              <Route path="/contact" exact component={Contact}/>
-              <Route path="/exp" exact component={Exp}/>
-              <Route path="/prof/plans" exact component={Plans}/>
-              <Route path="/prof/guides" exact component={Guide}/>
-              <Route path="/prof/curiosities" exact component={Curiosities}/>
-              <Route path="/prof/projects" exact component={Projects}/>
-            </AppBody>
-            {/* Footer */}
-          </AppBodyWrapper>
+          <Navbar />
+          <Route path="/" exact component={Home}/>
+          <Route path="/team" exact component={Team}/>
+          {/* <Route path="/" exact component={Home}/>
+          <Route path="/team" exact component={Team}/>
+          <Route path="/contact" exact component={Contact}/>
+          <Route path="/exp" exact component={Exp}/>
+          <Route path="/prof/plans" exact component={Plans}/>
+          <Route path="/prof/guides" exact component={Guide}/>
+          <Route path="/prof/curiosities" exact component={Curiosities}/>
+          <Route path="/prof/projects" exact component={Projects}/> */}
         </AppWrapper>
       </ThemeProvider>
     )
