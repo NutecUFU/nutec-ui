@@ -1,6 +1,6 @@
 {
   "name": "nutec-components",
-  "version": "0.0.4",
+  "version": "0.0.2",
   "private": false,
   "main": "dist/lib/index.js",
   "module": "dist/lib/index.js",
@@ -15,6 +15,7 @@
   "dependencies": {
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+    "react-flexbox-grid": "^2.1.2",
     "react-onclickoutside": "^6.8.0",
     "react-router-dom": "^4.3.1",
     "styled-components": "^4.1.3"
