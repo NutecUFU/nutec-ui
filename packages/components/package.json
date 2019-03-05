@@ -1,6 +1,6 @@
 {
   "name": "nutec-components",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "private": false,
   "main": "dist/lib/index.js",
   "module": "dist/lib/index.js",
