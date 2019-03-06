@@ -1,9 +1,13 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import { Container } from 'nutec-ui'
 
 export const AppWrapper = styled.div`
-  width: 60%;
-  margin: 0 auto;
+
+`
+export const FooterWrapper = styled.footer`
+  border-top: 1px solid rgba(0,0,0,.12);
+  padding: 4rem 1.25rem 2.5rem;
 `
 
 export const NavbarWrapper = styled.div`
@@ -13,8 +17,12 @@ export const NavbarWrapper = styled.div`
   height: 90px;
 `
 
+export const NavbarContent = styled(Container)`
+  display: flex;
+  justify-content: space-between;
+`
+
 export const NavbarLogo = styled.div`
-  
 `
 
 export const Nav = styled.ul`
@@ -33,7 +41,7 @@ export const NavLink = styled(Link)`
   color: #000;
 
   &:hover {
-    color:  #007bff;
+    color:  #04a9b5;
   }
 `
 
@@ -47,7 +55,7 @@ export const NavButton = styled.button`
   padding: .75rem 1.9rem;
   border-radius: 4px;
   border: none;
-  background-color: #007bff;
+  background-color: #04a9b5;
   color: #fff;
   font-size: 15px;
   font-weight: 500;

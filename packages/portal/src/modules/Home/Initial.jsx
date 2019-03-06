@@ -14,7 +14,7 @@ class Initial extends Component {
           </p>
         </InitialResumeWrapper>
         <InitialImageWrapper>
-          <img src={Science} />
+          <img src={Science} alt="physics section" />
         </InitialImageWrapper>
         
       </InitialWrapper>

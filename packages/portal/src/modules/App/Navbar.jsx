@@ -6,7 +6,8 @@ import {
   Nav,
   NavItem,
   NavButton,
-  NavLink
+  NavLink,
+  NavbarContent,
 } from './styled'
 import Logo from 'core/assets/images/logo.png'
 
@@ -14,17 +15,18 @@ class Navbar extends Component {
   render(){
     return (
       <NavbarWrapper>
-     
-        <NavbarLogo to="/">
-          <img src={Logo}/>
-        </NavbarLogo>
-        <Nav>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/team">Equipe</NavLink>
-          <NavItem>
-            <NavButton>Acessar Weblab</NavButton>
-          </NavItem>
-        </Nav>
+        <NavbarContent>
+          <NavbarLogo to="/">
+            <img src={Logo} alt="logo"/>
+          </NavbarLogo>
+          <Nav>
+            <NavLink to="/">Home</NavLink>
+            <NavLink to="/team">Equipe</NavLink>
+            <NavItem>
+              <NavButton>Acessar Weblab</NavButton>
+            </NavItem>
+          </Nav>
+        </NavbarContent>
       </NavbarWrapper>
     )
   }
