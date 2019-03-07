@@ -1,9 +1,8 @@
 FROM node:10.15 as build
 ARG package_name
 WORKDIR /usr/src/app
-COPY package.json yarn.lock ./
-RUN yarn
 COPY . ./
+RUN yarn
 RUN yarn build:${package_name}
 
 FROM nginx:1.15-alpine
