@@ -5,7 +5,6 @@
   "dependencies": {
     "axios": "^0.18.0",
     "final-form": "^4.11.0",
-    "nutec-ui": "^0.0.5",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "react-final-form": "^4.0.2",

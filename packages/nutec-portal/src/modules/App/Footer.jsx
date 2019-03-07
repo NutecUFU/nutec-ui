@@ -1,19 +1,20 @@
 import React, { Component } from 'react'
-import { Container, Grid } from 'nutec-ui'
+import { Container, Grid } from 'nutec-components'
 import { FooterWrapper } from './styled'
 
 class Navbar extends Component {
   render(){
     return (
       <FooterWrapper>
-        {/* <Container>
+        <Container>
           <Grid.Row>
             Teste
           </Grid.Row>
           <Grid.Row>
             <Grid.Col>Teste</Grid.Col>
+            <Grid.Col>Teste</Grid.Col>
           </Grid.Row>
-        </Container> */}
+        </Container>
       </FooterWrapper>
     )
   }

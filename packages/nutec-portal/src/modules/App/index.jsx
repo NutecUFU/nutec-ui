@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { ThemeProvider } from 'styled-components'
 import { Route } from 'react-router-dom'
-import { Container } from 'nutec-ui'
+import { Container } from 'nutec-components'
 
 import { actions as applicationActions } from '../../state/application/application-actions'
 import { theme } from '../../core/styled/theme'
@@ -27,16 +27,16 @@ class App extends Component {
         <AppWrapper>
           <GlobalStyle/>
           <Navbar />
-      
-            <Route path="/" exact component={Home}/>
-            <Route path="/team" exact component={Team}/>
-            <Route path="/contact" exact component={Contact}/>
-            <Route path="/exp" exact component={Exp}/>
-            <Route path="/prof/plans" exact component={Plans}/>
-            <Route path="/prof/guides" exact component={Guide}/>
-            <Route path="/prof/curiosities" exact component={Curiosities}/>
-            <Route path="/prof/projects" exact component={Projects}/>
-          
+            <Container>
+              <Route path="/" exact component={Home}/>
+              <Route path="/team" exact component={Team}/>
+              <Route path="/contact" exact component={Contact}/>
+              <Route path="/exp" exact component={Exp}/>
+              <Route path="/prof/plans" exact component={Plans}/>
+              <Route path="/prof/guides" exact component={Guide}/>
+              <Route path="/prof/curiosities" exact component={Curiosities}/>
+              <Route path="/prof/projects" exact component={Projects}/>
+            </Container>
           <Footer />
         </AppWrapper>
       </ThemeProvider>

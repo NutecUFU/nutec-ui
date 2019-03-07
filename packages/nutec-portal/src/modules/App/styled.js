@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import { Container } from 'nutec-ui'
+import { Container } from 'nutec-components'
 
 export const AppWrapper = styled.div`
 

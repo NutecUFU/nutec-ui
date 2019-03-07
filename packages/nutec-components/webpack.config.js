@@ -19,7 +19,15 @@ module.exports = {
           extensions: [".js", ".jsx"]
         },
         loader: 'babel-loader',
-      }
+      },
+      { test: /\.(css|scss)$/,
+        use: [
+          { loader: 'style-loader' },
+          { loader: 'css-loader' },
+          { loader: 'sass-loader'}
+        ]
+      },
+
     ]
   }
 };

@@ -5,16 +5,20 @@
     "learna": "lerna-wizard",
     "lerna": "lerna",
     "start": "lerna run --parallel start",
-    "start:portal": "cd packages/portal && yarn start",
-    "start:weblab": "cd packages/weblab && yarn start",
-    "start:admin": "cd packages/admin && yarn start",
-    "build:portal": "cd packages/portal && yarn build",
-    "build:weblab": "cd packages/weblab && yarn build",
-    "build:admin": "cd packages/admin && yarn build"
+    "start:portal": "cd packages/nutec-portal && yarn start",
+    "start:weblab": "cd packages/nutec-weblab && yarn start",
+    "start:admin": "cd packages/nutec-admin && yarn start",
+    "build:lib": "cd packages/nutec-components && yarn build",
+    "build:portal": "cd packages/nutec-portal && yarn build",
+    "build:weblab": "cd packages/nutec-weblab && yarn build",
+    "build:admin": "cd packages/nutec-admin && yarn build"
   },
   "devDependencies": {
     "lerna": "^3.13.0"
   },
   "dependencies": {
-  }
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }
