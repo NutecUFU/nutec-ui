@@ -1,6 +1,8 @@
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
+  @import '~bootstrap/dist/css/bootstrap.min.css';
+
   html,
   body {
     margin: 0;

@@ -21,7 +21,6 @@ import Home from '../Home';
 
 class App extends Component {
   render(){
-    console.log(Container)
     return (
       <ThemeProvider theme={theme}>
         <AppWrapper>
