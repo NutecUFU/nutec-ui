@@ -3,11 +3,13 @@ import { Card, Jumbotron, CardText } from 'reactstrap'
 
 
 export const LandingWrapper = styled.div`
-
+  height: 100%;
+  background: #f8f9fa;
 `
 
 export const NavbarWrapper = styled.div`
   padding: .6rem;
+  background: #fff;
   box-shadow: 0 1px 15px rgba(0,0,0,.04), 0 1px 6px rgba(0,0,0,.04);
 `
 
@@ -29,7 +31,7 @@ export const NavbarBrand = styled.div`
 `
 export const SectionWrapper = styled(Jumbotron)`
   text-align: center;
-  background: #343a40 !important;
+  background: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%) !important;
   color: #fff;
 
   p {
@@ -38,12 +40,13 @@ export const SectionWrapper = styled(Jumbotron)`
 `
 
 export const ListWrapper = styled.div`
-  margin-top: 50px;
+  margin-top: -60px;
 `
 
 export const ListItemWrapper = styled(Card)`
   box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, .05);
   height: 450px;
+  border: none !important;
 
   button {
     margin-right: 10px;
@@ -57,7 +60,7 @@ export const ListItemTextWrapper = styled(CardText)`
 
 export const ListItemImageWrapper = styled.div`
   height: 200px;
-  background: #212121;
+  background: #eeeeee;
   border-top-left-radius: calc(.25rem - 1px);
   border-top-right-radius: calc(.25rem - 1px);
 

@@ -17,8 +17,10 @@ export const ExperimentsContentWrapper = styled.div`
 `
 
 export const NavbarWrapper = styled.div`
-  height: 80px;
-  line-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
   padding: 0 10px;
   border-bottom: 1px solid ${({theme}) => theme.color.borderColor};
   background: ${({theme}) => theme.color.blueBackground};
@@ -29,6 +31,7 @@ export const NavbarWrapper = styled.div`
 
 export const NavbarTitle = styled.h1`
   font-family: "Montserrat", sans-serif;
+  font-size: 24px;
   color: #047c85;
   padding: 0;
   margin: 0;
