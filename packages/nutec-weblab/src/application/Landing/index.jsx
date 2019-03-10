@@ -1,17 +1,19 @@
 import React, { Component } from 'react'
 import Navbar from './Navbar'
+import Section from './Section'
 import List from './List'
 import { LandingWrapper } from './styled';
 
-class Landing extends Component {
-  render() {
-    return (
-      <LandingWrapper>
-        <Navbar />
-        <List />
-      </LandingWrapper>
-    )
-  }
+const Landing = () => {
+
+  return (
+    <LandingWrapper>
+      <Navbar />
+      <Section />
+      <List />
+    </LandingWrapper>
+  )
+
 
 }
 

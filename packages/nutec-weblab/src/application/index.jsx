@@ -7,18 +7,17 @@ import { ApplicationWrapper } from './styled';
 
 import Landing from './Landing'
 
-class Application extends Component {
-  render() {
-    return (
-      <ThemeProvider theme={themeDefault}>
-        <ApplicationWrapper>
-          <GlobalStyle />
-          <Route path="/" component={Landing} />
-          
-        </ApplicationWrapper>
-      </ThemeProvider>
-    )
-  }
+const Application = () => {
+  return (
+    <ThemeProvider theme={themeDefault}>
+      <ApplicationWrapper>
+        <GlobalStyle />
+        <Route path="/" component={Landing} />
+        
+      </ApplicationWrapper>
+    </ThemeProvider>
+  )
+
   
 }
 

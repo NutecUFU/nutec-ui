@@ -1,18 +1,21 @@
 import React, { Component } from 'react'
 import Logo from 'core/assets/images/logo.png'
 import { Container } from 'reactstrap'
-import { NavbarWrapper } from './styled';
+import { NavbarWrapper, NavbarBrand } from './styled';
 
-class Navbar extends Component {
-  render() {
-    return (
-      <NavbarWrapper>
-        <Container>
-        <img src={Logo} />
-        </Container>
-      </NavbarWrapper>
-    )
-  }
+const Navbar = () => {
+
+  return (
+    <NavbarWrapper>
+      <Container>
+        <NavbarBrand>
+          <img src={Logo} />
+          <span>WEBLAB</span>
+        </NavbarBrand>
+      </Container>
+    </NavbarWrapper>
+  )
+
 }
 
 export default Navbar
