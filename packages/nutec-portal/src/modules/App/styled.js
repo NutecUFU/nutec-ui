@@ -51,7 +51,7 @@ export const NavItem = styled.li`
   font-size: 16px;
 `
 
-export const NavButton = styled.button`
+export const NavButton = styled(Link)`
   padding: .75rem 1.9rem;
   border-radius: 4px;
   border: none;
@@ -60,5 +60,6 @@ export const NavButton = styled.button`
   font-size: 15px;
   font-weight: 500;
   margin-left: 30px;
+  text-decoration: none;
   cursor: pointer;
 `
