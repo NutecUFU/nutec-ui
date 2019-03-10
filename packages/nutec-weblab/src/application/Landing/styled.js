@@ -40,7 +40,7 @@ export const SectionWrapper = styled(Jumbotron)`
 `
 
 export const ListWrapper = styled.div`
-  margin-top: -60px;
+  margin-top: 50px;
 `
 
 export const ListItemWrapper = styled(Card)`
