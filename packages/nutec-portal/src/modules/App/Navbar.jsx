@@ -23,7 +23,7 @@ class Navbar extends Component {
             <NavLink to="/">Home</NavLink>
             <NavLink to="/team">Equipe</NavLink>
             <NavItem>
-              <NavButton to="/weblab">Acessar Weblab</NavButton>
+              <NavButton href="/weblab">Acessar Weblab</NavButton>
             </NavItem>
           </Nav>
         </NavbarContent>
