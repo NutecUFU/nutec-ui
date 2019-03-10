@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Card, Jumbotron } from 'reactstrap'
+import { Card, Jumbotron, CardText } from 'reactstrap'
 
 
 export const LandingWrapper = styled.div`
@@ -43,11 +43,23 @@ export const ListWrapper = styled.div`
 
 export const ListItemWrapper = styled(Card)`
   box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, .05);
+  height: 450px;
+
+  button {
+    margin-right: 10px;
+  }
+`
+
+export const ListItemTextWrapper = styled(CardText)`
+  height: 120px;
+  overflow-y: auto;
 `
 
 export const ListItemImageWrapper = styled.div`
   height: 200px;
   background: #212121;
+  border-top-left-radius: calc(.25rem - 1px);
+  border-top-right-radius: calc(.25rem - 1px);
 
   img {
     object-fit: contain;

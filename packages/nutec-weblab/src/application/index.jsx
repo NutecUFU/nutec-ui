@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { ThemeProvider } from 'styled-components'
 import { Route } from 'react-router-dom'
 import { themeDefault } from 'core/styled/theme/default';
