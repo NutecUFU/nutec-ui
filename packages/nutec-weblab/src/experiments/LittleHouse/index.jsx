@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { LittleHouseWrapper } from './styled'
 import LivingRoom from './LivingRoom';
-import { DashboardActions } from '../Dashboard/state/action';
+import { DashboardActions } from 'application/Dashboard/state/action';
 
 const LittleHouse = ({match, setTitle}) => {
 
