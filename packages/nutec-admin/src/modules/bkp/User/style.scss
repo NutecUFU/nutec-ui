@@ -1,0 +1,59 @@
+.user {
+  &__list {
+    &__item {
+
+      .control-pending {
+        margin-top: 10px;
+        position: absolute;
+        width: 100%;
+
+        button {
+          width: 80px;
+          height: 30px;
+          font-size: 10px;
+        }
+      }
+
+      .edit-item {
+        margin-top: 10px;
+        position: absolute;
+        width: 100%;
+        text-align: right;
+
+        i {
+          color: red;
+          font-size: 18px;
+          cursor: pointer;
+        }
+
+        &-confirm {
+          button {
+            height: 30px;
+            font-size: 10px;
+          }
+        }
+      }
+
+
+      .card-body {
+        i {
+          font-size: 50px;
+        }
+
+        h5 {
+          font-size: 16px;
+        }
+
+        p {
+          font-size: 12px;
+          font-weight: bold;
+        }
+      }
+
+    }
+  }
+
+  &__modal {
+
+  }
+}

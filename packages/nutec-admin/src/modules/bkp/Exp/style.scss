@@ -1,0 +1,16 @@
+.exp{
+    &__icon{
+        height: 50px;
+        width: 50px;
+        background: #ff8d72;
+
+        i{
+            padding: 14px 13px;
+        }
+    }
+
+    &__item {
+        height: 150px;
+        cursor: pointer;
+    }
+}
