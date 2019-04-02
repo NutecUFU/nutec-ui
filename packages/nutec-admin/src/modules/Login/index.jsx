@@ -60,7 +60,7 @@ class Login extends Component {
   }
 
   render() {
-    const { status } = this.props
+    const { status, login } = this.props
     return (
       <LoginWrapper>
         <LoginFormWrapper>
@@ -68,7 +68,7 @@ class Login extends Component {
           <Card>
             <Card.Body>
             <TitleLogin>Você ja tem uma conta?</TitleLogin>
-            <LoginForm type={status} onSubmit={(data) => this.verifyDataToLogin(data, status)}/>
+            <LoginForm type={status} onSubmit={(data) => login(data)}/>
             </Card.Body>
           </Card>
         </LoginFormWrapper>

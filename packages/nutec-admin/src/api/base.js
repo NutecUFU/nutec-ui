@@ -6,7 +6,7 @@ import { getToken } from 'core/utils/auth'
 // http://nutecrexlab1.ufu.br/api
 // http://localhost:5000/api
 
-const ENVIRONMENT = 'http://nutecrexlab1.ufu.br/api'; // trocar aqui pelo endereco backend
+const ENVIRONMENT = 'http://localhost:8000/api'; // trocar aqui pelo endereco backend
 
 class BaseApi {
   constructor() {

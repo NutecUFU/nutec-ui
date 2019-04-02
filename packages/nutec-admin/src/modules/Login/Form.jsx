@@ -34,16 +34,16 @@ class LoginForm extends Component {
                 />
               )}
             </Field>
-            {type ==='ACTIVE' && (
-              <Field name="password" required>
-                {({input, meta}) => (
-                  <CustomInput 
-                    {...input}
-                    type="password"
-                    placeholder="Senha..."/>
-                )}
-              </Field>
-            )}
+       
+            <Field name="password" required>
+              {({input, meta}) => (
+                <CustomInput 
+                  {...input}
+                  type="password"
+                  placeholder="Senha..."/>
+              )}
+            </Field>
+            
             {type ==='NO_PASSWORD' && (
               <Field name="password" required>
                 {({input, meta}) => (

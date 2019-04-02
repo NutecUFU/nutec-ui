@@ -10,6 +10,7 @@ class Auth {
     return api.request(`v1/auth?email=${email}`);
   }
   static login(data) {
+    console.log(data)
     return api.request(`v1/auth`, {method: 'post', data})
   }
 }

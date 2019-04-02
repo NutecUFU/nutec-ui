@@ -30,7 +30,7 @@ export function* createUser(action) {
 export function* getAllUsers() {
   try {
     const users = yield call([UserApi, UserApi.getAll])
-    yield put(actions.getAllUserSuccess(users))
+    yield put(actions.getAllUserSuccess(users.results))
   } catch(e) {
     yield put(toasterActions.addToast('error', 'Não foi possível recuperar os usuários!'))
   }

@@ -7,7 +7,7 @@ class User {
     return api.request(`v1/user`, {method: 'post', data})
   }
   static getAll() {
-    return api.request(`v1/user`)
+    return api.request(`v1/users`)
   }
   static getUser(id){
     return api.request(`v1/user/${id}`)
