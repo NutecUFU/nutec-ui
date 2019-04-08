@@ -4,7 +4,7 @@ const api = new BaseApi()
 
 class User {
   static create(data) {
-    return api.request(`v1/user`, {method: 'post', data})
+    return api.request(`v1/users/`, {method: 'post', data})
   }
   static getAll() {
     return api.request(`v1/users`)

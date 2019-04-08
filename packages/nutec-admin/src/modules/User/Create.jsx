@@ -25,8 +25,20 @@ class Create extends Component {
           <CreateFormWrapper onSubmit={handleSubmit}>
             <Row>
               <Col md={4}>
-                Nome:
-                <Field name="name" required>
+                Primeiro nome:
+                <Field name="first_name" required>
+                  {({input, meta}) => (
+                    <Input
+                      {...input}
+                      type="text"
+                      required
+                    />
+                  )}
+                </Field>
+              </Col>
+              <Col md={4}>
+                Último nome:
+                <Field name="last_name" required>
                   {({input, meta}) => (
                     <Input
                       {...input}
@@ -48,42 +60,33 @@ class Create extends Component {
                   )}
                 </Field>
               </Col>
+            </Row>
+            <Row>
               <Col md={4}>
-                Data de Aniversário:
-                <Field name="dtBirth">
+                Senha:
+                <Field name="password">
                   {({input, meta}) => (
                     <Input
                       {...input}
-                      type="date"
+                      type="text"
                       required
                     />
                   )}
                 </Field>
               </Col>
-            </Row>
-            <Row>
               <Col md={4}>
-                <Field name="permission">
+                Username:
+                <Field name="username">
                   {({input, meta}) => (
-                    <InputSelect {...input} required>
-                      <InputSelect.Option value="" disabled selected>Selecione a permissao</InputSelect.Option>
-                      <InputSelect.Option value="ADM">Administrador</InputSelect.Option>
-                      <InputSelect.Option value="JR">Nutequiano</InputSelect.Option>
-                      <InputSelect.Option value="DEV">Desenvolvedor</InputSelect.Option>
-                    </InputSelect>
+                    <Input
+                      {...input}
+                      type="text"
+                      required
+                    />
                   )}
                 </Field>
               </Col>
-              <Col md={4}>
-                <Field name="status" required>
-                  {({input, meta}) => (
-                    <InputSelect {...input} required>
-                      <InputSelect.Option value="" disabled selected>Selecione o status</InputSelect.Option>
-                      <InputSelect.Option value="NEW_PASSWORD">Nova senha</InputSelect.Option>
-                    </InputSelect>
-                  )}
-                </Field>
-              </Col>
+              
             </Row>
 
             <Button type="submit" primary>Cadastrar</Button>

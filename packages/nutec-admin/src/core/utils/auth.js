@@ -17,8 +17,8 @@ export function getToken() {
 
   if (storageData) {
     const user = JSON.parse(storageData);
-    const { accessToken } = user.token;
-    return accessToken;
+    const { token } = user;
+    return token;
   }
 
   return '';
