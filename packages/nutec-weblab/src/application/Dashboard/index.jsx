@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { ThemeProvider } from 'styled-components'
 import { Route } from 'react-router-dom'
@@ -12,7 +12,11 @@ import Navbar from './Navbar'
 import Classroom from './Classroom'
 import LittleHouse from 'experiments/LittleHouse';
 
-const Experiments = ({match, title}) => {
+const Experiments = ({match, title, addUser}) => {
+
+  useEffect(() => {
+    addUser({name: 'Maycon'})
+  }, [])
 
   return (
     <ThemeProvider theme={themeDefault}>

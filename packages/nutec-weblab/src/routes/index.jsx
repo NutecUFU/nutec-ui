@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import Application from 'application'
-import Experiments from 'experiments/Dashboard'
+import Experiments from 'application/Dashboard'
 import store from 'store'
 
 const Routes = () => (
