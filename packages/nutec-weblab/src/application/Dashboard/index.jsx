@@ -12,7 +12,7 @@ import Navbar from './Navbar'
 import Classroom from './Classroom'
 import LittleHouse from 'experiments/LittleHouse';
 
-const Experiments = ({match, title, addUser}) => {
+const Experiments = ({match, title, status, addUser}) => {
 
   useEffect(() => {
     addUser({name: 'Maycon'})
@@ -23,8 +23,8 @@ const Experiments = ({match, title, addUser}) => {
       <ExperimentsWrapper>
         <GlobalStyle />
         <Sidebar />
-        <Classroom />
-        <ExperimentsContentWrapper>
+        { status && <Classroom /> }
+        <ExperimentsContentWrapper status={status}>
           <Navbar title={title} />
           <Route path={`${match.url}/little-house`} component={LittleHouse} />
         </ExperimentsContentWrapper>
@@ -42,8 +42,9 @@ Experiments.propTypes = {
   title: PropTypes.string,
 }
 
-const mapProps = ({dashboard: { title }}) => ({
-  title
+const mapProps = ({dashboard: { title, status }}) => ({
+  title,
+  status
 })
 
 export default connect(mapProps, DashboardActions)(Experiments)

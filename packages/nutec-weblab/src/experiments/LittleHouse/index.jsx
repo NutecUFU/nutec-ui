@@ -3,9 +3,9 @@ import { Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { LittleHouseWrapper } from './styled'
 import LivingRoom from './LivingRoom';
-import { DashboardActions } from '../Dashboard/state/action';
+import { DashboardActions } from 'application/Dashboard/state/action';
 
-const LittleHouse = ({match, setTitle}) => {
+const LittleHouse = ({match, setTitle, setActive}) => {
 
   useEffect(() => {
     setTitle('Casinha')
@@ -23,7 +23,8 @@ const mapProps = ({dashboard}) => ({
 })
 
 const mapActions = {
-  setTitle: DashboardActions.setTitle
+  setTitle: DashboardActions.setTitle,
+  setActive: DashboardActions.setActive
 }
 
 export default connect(mapProps, mapActions)(LittleHouse)

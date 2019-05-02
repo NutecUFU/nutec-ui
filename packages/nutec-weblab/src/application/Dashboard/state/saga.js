@@ -1,10 +1,10 @@
 import io from 'socket.io-client'
 import { eventChannel } from 'redux-saga';
-import { fork, take, call, put, cancel, all } from 'redux-saga/effects';
+import { fork, take, call, put, cancel, all, takeEvery } from 'redux-saga/effects';
 import { DashboardActions, DashboardTypes } from './action';
 
 const connect = () => {
-  const socket = io('http://localhost:5000')
+  const socket = io('http://localhost:4000')
   return new Promise(resolve => {
     socket.on('connect', () => {
       resolve(socket);
@@ -29,11 +29,10 @@ function* getUsers(socket) {
   }
 }
 
-function* addUser(socket) {
-  while (true) {
-    const user = yield take(DashboardActions.addUser)
-    socket.emit('user_join', user)
-  }
+function* addUser() {
+  const socket = yield call(connect)
+  const user = yield take(DashboardActions.addUser)
+  socket.emit('user_join', user)
 }
 
 
@@ -46,6 +45,7 @@ function* handleIO() {
 
 export default function* root(){
   yield all([
-    fork(handleIO)
+    // takeEvery(DashboardTypes.START, handleIO),
+    // takeEvery(DashboardTypes.ADD_USER, addUser)
   ])
 }

@@ -1,14 +1,30 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { connect } from 'react-redux';
 import { LivingRoomWrapper } from './styled';
+import { DashboardActions } from 'application/Dashboard/state/action';
 
-const LivingRoom = () => {
+const LivingRoom = ({ setActive, startClassroom }) => {
 
-    return (
-      <LivingRoomWrapper>
-        LivingRoomWrapper
-      </LivingRoomWrapper>
-    )
+  useEffect(() => {
+    setActive(true);
+    startClassroom(true);
+  }, [])
+
+  return (
+    <LivingRoomWrapper>
+      LivingRoomWrapper
+    </LivingRoomWrapper>
+  )
 
 }
 
-export default LivingRoom
+const mapProps = ({}) => ({
+
+});
+
+const mapActions = {
+  startClassroom: DashboardActions.startClassroom,
+  setActive: DashboardActions.setActive,
+};
+
+export default connect(null, mapActions)(LivingRoom)

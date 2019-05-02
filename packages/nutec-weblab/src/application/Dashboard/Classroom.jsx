@@ -1,28 +1,54 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { connect } from 'react-redux';
+import some from 'lodash/some'
+import filter from 'lodash/filter'
 import { Nav } from 'nutec-ui'
-import { ClassroomWrapper, ClassroomContent, NavItem } from './styled'
+import { addUser, userJoined, getUsers } from './socket'
+import { ClassroomWrapper, ClassroomContent, ClassroomDivider, StudentNavItem, NavItem } from './styled'
+import { DashboardActions } from './state/action';
 
-const Classroom = () => {
+const renderStudentNavItem = (currentUser, user) => {
 
-  const list = [
-    'Maycon pacheco',
-    'Lucas',
-    'Gabriel',
-    'Matheus',
-    'Joao',
-  ]
+  return (
+    <StudentNavItem key={user.id} control={user.control}>
+      {user.name}
+      {currentUser.isMaestro && !user.control && <i class="fas fa-gamepad"></i>}
+    </StudentNavItem>
+  )
+}
+
+const Classroom = ({ currentUser, setUserData }) => {
+  const[users, setUsers] = useState([]);
+
+  useEffect(() => {
+    userJoined((user) => setUserData(user));
+    addUser('Maycon Pacheco', false, false);
+    getUsers((users) => setUsers(users));
+  }, []);
 
   return (
     <ClassroomWrapper>
       <ClassroomContent>
         <Nav>
-          {list && list.map(item => (
-            <NavItem key={item}>{item}</NavItem>
+          {users && filter(users, { isMaestro: true }).map(user => (
+            <NavItem key={user.id} control={user.control}>{user.name}</NavItem>
           ))}
+          <ClassroomDivider />
+          {users && filter(users, { isMaestro: false }).map(
+            user => renderStudentNavItem(currentUser, user)
+          )}
         </Nav>
       </ClassroomContent>
     </ClassroomWrapper>
   )
 }
 
-export default Classroom
+const mapProps = ({ dashboard: { user: currentUser} }) => ({
+  currentUser
+})
+
+const mapActions = {
+  setUserData: DashboardActions.setUserData,
+}
+
+export default connect(mapProps, mapActions)(Classroom)

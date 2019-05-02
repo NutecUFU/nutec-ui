@@ -12,7 +12,7 @@ export const ExperimentsContentWrapper = styled.div`
   height: 100%;
   position: absolute;
   top: 0;
-  left: 410px;
+  left: ${({status}) => status ? '410px' : '110px'};
   right: 0;
 `
 
@@ -69,6 +69,11 @@ export const ClassroomWrapper = styled.div`
   box-shadow:inset 0 0 0 99999px rgba(0,0,0,0.1);
 `
 
+export const ClassroomDivider = styled.div`
+  background: #027179;
+  height: 2px;
+`
+
 export const ClassroomContent = styled.div`
   padding:  20px;
 `
@@ -90,7 +95,22 @@ export const NavItem = styled(Nav.Item)`
   color: #fff;
   margin: 5px 0;
   border-radius: 10px;
+  border-right: ${({control}) => control && '10px solid #f44336'};
 `
+
+export const StudentNavItem = styled(NavItem)`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  i {
+    &:hover {
+      cursor: pointer;
+      color: #eee;
+    }
+  }
+`
+
 export const NavLink = styled(Nav.Link)`
   text-align: center;
   padding: 10px 0;

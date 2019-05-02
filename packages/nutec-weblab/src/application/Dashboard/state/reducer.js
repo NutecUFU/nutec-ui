@@ -4,6 +4,8 @@ import { DashboardTypes } from './action';
 const initialState = {
   title: null,
   timer: false,
+  status: false,
+  user: null,
 }
 
 const reducer = {
@@ -12,7 +14,19 @@ const reducer = {
       ...state,
       title
     }
-  }
+  },
+  [DashboardTypes.ACTIVE](state, { status }) {
+    return {
+      ...state,
+      status
+    }
+  },
+  [DashboardTypes.SET_USER](state, { user }) {
+    return {
+      ...state,
+      user
+    }
+  },
 }
 
 export default createReducer(initialState, reducer)
