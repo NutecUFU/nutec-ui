@@ -67,6 +67,7 @@ export const ClassroomWrapper = styled.div`
   background: #fff;
   background: ${({theme}) => theme.color.primary};
   box-shadow:inset 0 0 0 99999px rgba(0,0,0,0.1);
+  overflow-y: scroll;
 `
 
 export const ClassroomDivider = styled.div`

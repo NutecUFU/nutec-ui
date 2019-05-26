@@ -2,6 +2,9 @@ import React, { useEffect } from 'react'
 import { connect } from 'react-redux';
 import { LivingRoomWrapper } from './styled';
 import { DashboardActions } from 'application/Dashboard/state/action';
+import Webcam from './Webcam'
+import Chart from './Chart'
+import Footer from './Footer'
 
 const LivingRoom = ({ setActive, startClassroom }) => {
 
@@ -12,7 +15,9 @@ const LivingRoom = ({ setActive, startClassroom }) => {
 
   return (
     <LivingRoomWrapper>
-      LivingRoomWrapper
+      <Webcam />
+      <Chart />
+      <Footer />
     </LivingRoomWrapper>
   )
 
